@@ -8,6 +8,8 @@ export const Description = () => {
     className: "text-lg font-bold text-center w-full"
   }, "Description"), /* @__PURE__ */ React.createElement("p", {
     className: ""
+  }, "Transaction ID: ", helloWorldState?.result.transactionId), /* @__PURE__ */ React.createElement("p", {
+    className: ""
   }, "Cluster URL: ", helloWorldState?.result.url), /* @__PURE__ */ React.createElement("p", {
     className: ""
   }, "Payer Account: ", helloWorldState?.result.payerAccount), /* @__PURE__ */ React.createElement("p", {

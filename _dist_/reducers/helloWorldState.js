@@ -4,6 +4,7 @@ const resultInitialState = {
   payerAccount: "",
   programId: "FdcHmS8Ko9xGEKJogxMnLF3eR6YNATszmTFcWzFNQ7n7",
   greetedPubkey: "3ugHswV4h9nJbaAwGnjH84ebftsyNp2eo1e5hL3h8oKa",
+  transactionId: "",
   numGreetes: 0
 };
 const helloWorldSlice = createSlice({

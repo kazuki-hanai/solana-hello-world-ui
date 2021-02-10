@@ -33,11 +33,11 @@ export class HelloWorldExecutor {
       programId: this.programId,
       data: Buffer.alloc(0)
     });
-    const transaction = await sendAndConfirmTransaction(this.connection, new Transaction().add(instruction), [this.payerAccount], {
+    const transactionId = await sendAndConfirmTransaction(this.connection, new Transaction().add(instruction), [this.payerAccount], {
       commitment: "singleGossip",
       preflightCommitment: "singleGossip"
     });
-    console.log("transaction: ", transaction);
+    console.log("transaction: ", transactionId);
     const accountInfo = await this.connection.getAccountInfo(this.greetedPubkey);
     if (accountInfo === null) {
       throw "Error: cannot find the greeted account";
@@ -48,6 +48,7 @@ export class HelloWorldExecutor {
       payerAccount: this.payerAccount.publicKey.toBase58(),
       programId: this.programId.toBase58(),
       greetedPubkey: this.greetedPubkey.toBase58(),
+      transactionId,
       numGreetes: info.numGreets
     };
   }
