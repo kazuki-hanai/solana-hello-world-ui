@@ -12,9 +12,15 @@
     "generate-css-types": "tailwindcss-classnames --config tailwind.config.js -o src/tailwindcss-classnames.ts"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.5.0",
+    "@types/react-redux": "^7.1.16",
+    "@types/redux": "^3.6.0",
+    "buffer": "^6.0.3",
     "classnames": "^2.2.6",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
     "tailwindcss": "^2.0.2",
     "tailwindcss-classnames": "^1.9.0"
   },
