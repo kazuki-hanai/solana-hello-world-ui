@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { setHelloWorldResult } from '@/reducers/helloWorldState';
 
 export const HelloWorld = (): JSX.Element => {
-    const [cluster, setCluster] = useState('devnet');
+    const [url, setUrl] = useState('https://devnet.solana.com');
     const [privateKey, setPrivateKey] = useState('');
     const [programId, setProgramId] = useState('');
     const [greetedPubKey, setGreetedPubKey] = useState('');
@@ -13,7 +13,7 @@ export const HelloWorld = (): JSX.Element => {
         console.log('saying hello world!');
         try {
             const helloworld = new HelloWorldExecutor(
-                cluster,
+                url,
                 privateKey,
                 programId,
                 greetedPubKey,
@@ -30,9 +30,9 @@ export const HelloWorld = (): JSX.Element => {
         <div className="flex flex-col">
             <input
                 type="text"
-                placeholder="cluster name: e.g. devnet"
+                placeholder="cluster url: e.g. https://devnet.solana.com"
                 className="my-1 px-3 py-3 placeholder-gray-400 text-gray-700 rbg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full"
-                onChange={(e) => setCluster(e.target.value)}
+                onChange={(e) => setUrl(e.target.value)}
             ></input>
             <input
                 type="text"

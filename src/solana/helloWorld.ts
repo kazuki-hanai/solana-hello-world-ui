@@ -36,11 +36,8 @@ export class HelloWorldExecutor {
     programId: PublicKey;
     greetedPubkey: PublicKey;
 
-    constructor(cluster: string, privateKey: string, programId: string, greetedPubkey: string) {
-        if (isCluster(cluster))
-            this.url = clusterApiUrl(cluster, true);
-        else
-            throw new Error("cluster name is not valid.");
+    constructor(url:string, privateKey: string, programId: string, greetedPubkey: string) {
+        this.url = url;
         this.connection = new Connection(url, 'singleGossip');
         this.payerAccount = new Account(privateKey.split(',').map((x) => parseInt(x, 10)));
         this.programId = new PublicKey(programId);
