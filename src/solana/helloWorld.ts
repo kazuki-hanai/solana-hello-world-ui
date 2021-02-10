@@ -56,7 +56,7 @@ export class HelloWorldExecutor {
             programId: this.programId,
             data: Buffer.alloc(0), // All instructions are hellos
         });
-        const transaction = await sendAndConfirmTransaction(
+        const transactionId = await sendAndConfirmTransaction(
             this.connection,
             new Transaction().add(instruction),
             [this.payerAccount],
@@ -65,7 +65,7 @@ export class HelloWorldExecutor {
                 preflightCommitment: 'singleGossip',
             },
         );
-        console.log("transaction: ", transaction);
+        console.log("transaction: ", transactionId);
 
         const accountInfo = await this.connection.getAccountInfo(this.greetedPubkey);
         if (accountInfo === null) {
@@ -77,6 +77,7 @@ export class HelloWorldExecutor {
             payerAccount: this.payerAccount.publicKey.toBase58(),
             programId: this.programId.toBase58(),
             greetedPubkey: this.greetedPubkey.toBase58(),
+            transactionId: transactionId,
             numGreetes: info.numGreets
         };
     }

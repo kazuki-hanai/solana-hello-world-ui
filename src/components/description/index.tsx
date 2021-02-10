@@ -9,6 +9,9 @@ export const Description = (): JSX.Element => {
             <h2 className="text-lg font-bold text-center w-full">
                 Description
             </h2>
+            <p className="">
+                Transaction ID: {helloWorldState?.result.transactionId}
+            </p>
             <p className="">Cluster URL: {helloWorldState?.result.url}</p>
             <p className="">
                 Payer Account: {helloWorldState?.result.payerAccount}

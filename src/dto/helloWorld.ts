@@ -4,5 +4,6 @@ export interface HelloWorldResult {
     payerAccount: string;
     programId: string;
     greetedPubkey: string;
+    transactionId: string;
     numGreetes: number;
 }
