@@ -14,10 +14,11 @@ module.exports = {
         /* ... */
     },
     buildOptions: {
+        baseUrl: '/solana-hello-world-ui/',
     },
     packageOptions: {
-        source: "local",
-        polyfillNode: true
+        source: 'local',
+        polyfillNode: true,
     },
     alias: {
         '@/': './src',
