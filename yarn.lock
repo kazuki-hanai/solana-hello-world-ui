@@ -7391,6 +7391,11 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
+snowpack-plugin-baseurl-handler@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/snowpack-plugin-baseurl-handler/-/snowpack-plugin-baseurl-handler-0.0.3.tgz#8975f285f82433cee2f0d6738b033c4c69b72834"
+  integrity sha512-CLIdnjczVmXufPAytkdigvxW9b4xR54aCq8jQqWc1ad/vJaXEJ7UGCflSzthHaFzMLS/3MxaxNw1lqrMzgn40A==
+
 snowpack@^3.0.11:
   version "3.0.11"
   resolved "https://registry.yarnpkg.com/snowpack/-/snowpack-3.0.11.tgz#95f69f95367116e3a9bb5112d090d6328f2d3a28"

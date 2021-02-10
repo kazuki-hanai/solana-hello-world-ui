@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "snowpack dev --open=false",
-    "build": "snowpack build",
+    "build": "snowpack build --clean --config snowpack.config.js",
     "test": "web-test-runner \"src/**/*.test.tsx\"",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
@@ -51,6 +51,7 @@
     "postcss-cli": "^8.3.1",
     "prettier": "^2.0.5",
     "snowpack": "^3.0.11",
+    "snowpack-plugin-baseurl-handler": "^0.0.3",
     "typescript": "^4.0.0"
   }
 }
