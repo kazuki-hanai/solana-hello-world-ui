@@ -4,8 +4,7 @@ import {
   PublicKey,
   TransactionInstruction,
   Transaction,
-  sendAndConfirmTransaction,
-  clusterApiUrl
+  sendAndConfirmTransaction
 } from "../../_snowpack/pkg/@solana/web3js.js";
 import {Buffer} from "../../_snowpack/pkg/buffer.js";
 import BufferLayout from "../../_snowpack/pkg/buffer-layout.js";
@@ -17,12 +16,9 @@ const isCluster = (arg) => {
   return arg === "devnet" || arg === "testnet" || arg === "mainnet-beta" || arg === void 0;
 };
 export class HelloWorldExecutor {
-  constructor(cluster, privateKey, programId, greetedPubkey) {
-    if (isCluster(cluster))
-      this.url = clusterApiUrl(cluster, true);
-    else
-      throw new Error("cluster name is not valid.");
-    this.connection = new Connection(url, "singleGossip");
+  constructor(url2, privateKey, programId, greetedPubkey) {
+    this.url = url2;
+    this.connection = new Connection(url2, "singleGossip");
     this.payerAccount = new Account(privateKey.split(",").map((x) => parseInt(x, 10)));
     this.programId = new PublicKey(programId);
     this.greetedPubkey = new PublicKey(greetedPubkey);
