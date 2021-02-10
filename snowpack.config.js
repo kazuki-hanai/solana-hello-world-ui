@@ -17,6 +17,7 @@ module.exports = {
     },
     packageOptions: {
         source: "local",
+        polyfillNode: true
     },
     alias: {
         '@/': './src',
